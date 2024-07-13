@@ -1,0 +1,4 @@
+rootProject.name = 'ristorante'
+include 'application', 'infrastructure', 'domain', 'boot'
+
+

@@ -1,0 +1,26 @@
+plugins {
+    id 'java'
+}
+
+group = 'api'
+version = '0.0.1-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation platform('org.junit:junit-bom:5.10.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    implementation project(':application')
+    implementation project(':infrastructure')
+
+}
+
+bootJar {
+    mainClass.set('ristorante.boot.java.RistoranteBootMain')
+}
+
+test {
+    useJUnitPlatform()
+}
