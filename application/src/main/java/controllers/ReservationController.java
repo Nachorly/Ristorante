@@ -13,7 +13,6 @@ public class ReservationController {
 
     @PostMapping
     public ResponseEntity<String> makeReservation(@RequestBody String test){
-        System.out.println(test);
         return new ResponseEntity<>("Reservation created", HttpStatus.CREATED);
     }
 }
