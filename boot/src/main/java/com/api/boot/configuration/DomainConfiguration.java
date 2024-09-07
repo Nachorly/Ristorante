@@ -1,9 +1,9 @@
-package configuration;
+package com.api.boot.configuration;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import service.ReservationService;
-import service.ReservationServiceImpl;
+import com.api.domain.service.ReservationService;
+import com.api.domain.service.ReservationServiceImpl;
 
 @Configuration
 public class DomainConfiguration {

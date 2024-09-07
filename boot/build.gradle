@@ -20,7 +20,7 @@ dependencies {
 }
 
 bootJar {
-    mainClass.set('ristorante.boot.java.RistoranteBootMain')
+    mainClass.set('ristorante.boot.java.com.api.boot.RistoranteBootMain')
 }
 
 test {

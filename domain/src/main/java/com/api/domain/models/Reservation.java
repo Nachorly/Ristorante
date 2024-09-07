@@ -1,6 +1,6 @@
-package models;
+package com.api.domain.models;
 
-import models.valueobjects.*;
+import com.api.domain.models.valueobjects.*;
 
 public class Reservation {
     private final TableId tableId;

@@ -1,4 +1,4 @@
-package models.valueobjects;
+package com.api.domain.models.valueobjects;
 
 import java.time.LocalDateTime;
 

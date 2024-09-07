@@ -1,4 +1,4 @@
-package repository;
+package com.api.domain.respository;
 
 public interface ReservationRepository {
 }

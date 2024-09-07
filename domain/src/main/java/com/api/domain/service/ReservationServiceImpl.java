@@ -1,4 +1,4 @@
-package service;
+package com.api.domain.service;
 
 public class ReservationServiceImpl implements ReservationService {
     @Override
