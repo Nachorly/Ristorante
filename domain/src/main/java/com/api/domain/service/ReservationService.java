@@ -1,5 +1,7 @@
 package com.api.domain.service;
 
+import com.api.domain.models.Reservation;
+
 public interface ReservationService {
-    public String metodoPrueba();
+    String makeReservation(Reservation reservation);
 }

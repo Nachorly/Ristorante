@@ -1,5 +1,8 @@
 package com.api.boot.controllers;
 
+import com.api.boot.dto.ReservationRequest;
+import com.api.domain.models.Reservation;
+import com.api.domain.models.valueobjects.*;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -18,7 +21,8 @@ public class ReservationController {
     }
 
     @PostMapping
-    public ResponseEntity<String> makeReservation(@RequestBody String test){
-        return new ResponseEntity<>(reservationService.metodoPrueba(), HttpStatus.CREATED);
+    public ResponseEntity<String> crearReserva(@RequestBody ReservationRequest reservaRequest) {
+
+        return ResponseEntity.ok("PaxName" + reservaRequest.getPaxName());
     }
 }
