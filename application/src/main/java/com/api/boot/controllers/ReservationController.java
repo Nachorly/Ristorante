@@ -1,9 +1,8 @@
 package com.api.boot.controllers;
 
+import com.api.boot.converters.ReservationRequestConverter;
 import com.api.boot.dto.ReservationRequest;
 import com.api.domain.models.Reservation;
-import com.api.domain.models.valueobjects.*;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -21,8 +20,11 @@ public class ReservationController {
     }
 
     @PostMapping
-    public ResponseEntity<String> crearReserva(@RequestBody ReservationRequest reservaRequest) {
+    public ResponseEntity<String> makeReservation(@RequestBody ReservationRequest reservationRequest) {
+        Reservation reservation = ReservationRequestConverter.reservationRequestToDomain(reservationRequest);
 
-        return ResponseEntity.ok("PaxName" + reservaRequest.getPaxName());
+        reservationService.makeReservation(reservation);
+
+        return ResponseEntity.ok("PaxName " + reservation.getPaxName().name());
     }
 }

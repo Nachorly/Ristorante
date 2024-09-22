@@ -4,7 +4,7 @@ import java.time.LocalDateTime;
 
 public class ReservationRequest {
     private String tableId;
-    private LocalDateTime bookingDate;
+    private LocalDateTime reservationDate;
     private String paxName;
     private int paxQuantity;
     private String email;
@@ -18,12 +18,12 @@ public class ReservationRequest {
         this.tableId = tableId;
     }
 
-    public LocalDateTime getBookingDate() {
-        return bookingDate;
+    public LocalDateTime getReservationDate() {
+        return reservationDate;
     }
 
-    public void setBookingDate(LocalDateTime bookingDate) {
-        this.bookingDate = bookingDate;
+    public void setReservationDate(LocalDateTime reservationDate) {
+        this.reservationDate = reservationDate;
     }
 
     public String getPaxName() {
